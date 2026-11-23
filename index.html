@@ -605,6 +605,38 @@ html.dark .promo-pop img{filter:none}
 .varsity-code{min-width:0}.varsity-grid{align-items:stretch}.varsity-card{justify-content:flex-start}
 .varsity-card h3{font-size:11px;line-height:1.35}.varsity-card p{font-size:8.5px;line-height:1.3}
 }
+/* ===== Gorgeous pack ===== */
+#scrollProg{position:fixed;top:0;left:0;height:4px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#12b8c5,#2457d6 55%,#ffc400);z-index:9999;pointer-events:none;border-radius:0 3px 3px 0;box-shadow:0 0 10px rgba(36,87,214,.45)}
+/* wave dividers */
+section.alt-bg{position:relative}
+section.alt-bg::before{content:"";position:absolute;left:0;right:0;top:-29px;height:30px;background:#fff;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'%3E%3Cpath d='M0 40V20C240 -6 480 -6 720 16S1200 38 1440 12V40Z'/%3E%3C/svg%3E") center/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'%3E%3Cpath d='M0 40V20C240 -6 480 -6 720 16S1200 38 1440 12V40Z'/%3E%3C/svg%3E") center/100% 100% no-repeat;pointer-events:none}
+section[hidden]{display:none!important}
+/* gradient headings */
+.section-head h2{background:linear-gradient(95deg,#0a3a86 10%,#2457d6 55%,#12b8c5 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.varsity-section .section-head h2{background:none;-webkit-text-fill-color:#fff;color:#fff}
+.section-head h2::after{content:"";display:block;width:64px;height:4px;margin:12px auto 0;border-radius:4px;background:linear-gradient(90deg,#ffc400,#ff9d00)}
+/* gradient buttons + shine */
+.btn,.nav-cta{position:relative;overflow:hidden}
+.btn:not(.alt):not(.hero-gold),.hero-blue{background-image:linear-gradient(135deg,#0a4fc4,#2f80ff)}
+.hero-gold,.nav-cta,.varsity-bottom .btn{background-image:linear-gradient(135deg,#ffd23d,#ffb300);color:#062e68}
+.btn::after,.nav-cta::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .6s ease}
+.btn:hover::after,.nav-cta:hover::after{left:130%}
+.btn:hover{box-shadow:0 12px 26px rgba(36,87,214,.35)}
+/* glass + soft depth cards */
+.card,.snapshot-card,.teacher-card,.result-card,.fa-row,.notice,.faq-item,.perk{box-shadow:0 2px 4px rgba(16,38,75,.05),0 14px 34px rgba(16,38,75,.09);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.card:hover,.snapshot-card:hover,.teacher-card:hover,.result-card:hover,.perk:hover{transform:translateY(-6px);border-color:#9fc0f5;box-shadow:0 4px 8px rgba(16,38,75,.06),0 22px 50px rgba(36,87,214,.22),0 0 0 1px rgba(47,128,255,.18)}
+.feature-strip{background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(255,255,255,.8)}
+.varsity-card{-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 12px 28px rgba(0,0,0,.18)}
+.varsity-card:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 18px 38px rgba(0,0,0,.28),0 0 0 1px rgba(255,196,0,.45)}
+@media(max-width:560px){section.alt-bg::before{top:-19px;height:20px}#scrollProg{height:3px}}
+@media(prefers-reduced-motion:reduce){.btn::after,.nav-cta::after{display:none}}
+@media(max-width:560px){
+#about .cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+#about .card{padding:12px 7px;border-radius:12px;text-align:center}
+#about .card>*:first-child{width:38px;height:38px;margin:0 auto}#about .card .i{width:20px;height:20px}
+#about .card h3{font-size:11.5px;margin:8px 0 4px;line-height:1.3}
+#about .card p{font-size:9.5px;line-height:1.45;margin:0}
+}
 </style>
 </head><body>
 <div class="page-loader" id="pageLoader" aria-hidden="true"><img src="assets/logo.png.png" alt=""><span class="ld-bar"><i></i></span></div>
@@ -638,6 +670,7 @@ html.dark .promo-pop img{filter:none}
 </defs></svg>
 
 <div class="topbar"><div class="topbar-inner wrap"><div class="topbar-motto"><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg> <em>Learn Today. Lead Tomorrow.</em></div><div class="topbar-contact"><a href="tel:01352205074"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg> <b>01352-205074</b></a><span class="top-sep">|</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg> C-72/5, Birulia Road, Savar, Dhaka</span></div><div class="top-tools"><button class="tool-btn" id="langBtn" type="button" aria-label="Switch language / ভাষা বদলান">EN</button><button class="tool-btn" id="themeBtn" type="button" aria-label="Toggle dark mode" aria-pressed="false"><span class="ic-moon"><svg class="i" aria-hidden="true"><use href="#i-moon"/></svg></span><span class="ic-sun"><svg class="i" aria-hidden="true"><use href="#i-sun"/></svg></span></button></div><a class="topbar-social" href="https://www.facebook.com/share/19ZHBdpRdJ/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="i" aria-hidden="true"><use href="#i-fb"/></svg></a></div></div>
+<div id="scrollProg" aria-hidden="true"></div>
 <header><div class="wrap nav" id="nav"><a class="brand" href="#home"><img src="assets/logo.png.png" alt="Fabulous Academic logo"><span>FABULOUS ACADEMIC<small>AND ADMISSION CARE</small></span></a><nav><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#teachers">Teachers</a><a href="#routine">Routine</a><a href="#lessons">Grammar</a><a href="#notices">Notice</a><a href="#notes">PDF Notes</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav><a class="nav-cta" href="#admission"><svg class="i" aria-hidden="true"><use href="#i-cap"/></svg> Admission Open</a><button class="menu" aria-label="Open menu" onclick="document.getElementById('nav').classList.toggle('open')"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button></div></header>
 <main>
 <section class="hero exact-hero" id="home">
@@ -1678,5 +1711,10 @@ try { if (sessionStorage.getItem('fa-seen')) document.documentElement.classList.
     syncTheme();
   });
 })();
+</script>
+<script>
+(function(){var b=document.getElementById('scrollProg'),t=false;if(!b)return;
+function u(){t=false;var d=document.documentElement,m=d.scrollHeight-d.clientHeight;b.style.transform='scaleX('+(m>0?Math.min(1,d.scrollTop/m):0)+')'}
+window.addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(u)}},{passive:true});u();})();
 </script>
 </body></html>
