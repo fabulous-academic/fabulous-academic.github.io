@@ -594,6 +594,17 @@ a.pdf-row:hover .pdf-dl{background:#073477}
 html.dark .promo-pop{filter:invert(1) hue-rotate(180deg)}
 html.dark .promo-pop img{filter:none}
 
+@media(max-width:560px){
+.feature-strip{grid-template-columns:repeat(6,minmax(0,1fr));width:94%;padding:10px 4px;row-gap:4px}
+.feature-item{grid-column:span 2;flex-direction:column;text-align:center;gap:6px;padding:8px 3px;border-right:0!important}
+.feature-item:nth-child(4){grid-column:2/4}.feature-item:nth-child(5){grid-column:4/6}
+.feature-icon{width:42px;height:42px}.feature-icon .i{width:22px;height:22px}
+.feature-item b{font-size:10.5px;line-height:1.3}.feature-item b{display:block}.feature-item small{font-size:8.5px;line-height:1.3}
+.varsity-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.varsity-card{flex-direction:column;text-align:center;gap:8px;padding:12px 6px;min-height:0;border-radius:12px}
+.varsity-code{min-width:0}.varsity-grid{align-items:stretch}.varsity-card{justify-content:flex-start}
+.varsity-card h3{font-size:11px;line-height:1.35}.varsity-card p{font-size:8.5px;line-height:1.3}
+}
 </style>
 </head><body>
 <div class="page-loader" id="pageLoader" aria-hidden="true"><img src="assets/logo.png.png" alt=""><span class="ld-bar"><i></i></span></div>
